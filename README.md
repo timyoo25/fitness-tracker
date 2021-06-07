@@ -10,120 +10,106 @@ The user can input and record their workout/exercises information for tracking t
 
 ## Wireframes
 
-Homepage: https://wireframe.cc/hgKi14
-Weight Training page: https://wireframe.cc/XzXGNn
-Cardio Training page: https://wireframe.cc/KOb5sq
-Calorie Tracking page: https://wireframe.cc/twyL8S
+- Homepage: https://wireframe.cc/hgKi14
+- Weight Training page: https://wireframe.cc/XzXGNn
+- Cardio Training page: https://wireframe.cc/KOb5sq
 
 ## Component Hierarchy
 
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
 https://wireframe.cc/3ITP9y
 
 ## API and Data Sample
 
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This **must** be properly formatted. An example is below:
+Weight Lifting Table
 
+```json
 {
-"records": [
-{
-"id": "recf7TwzUF9PacZe0",
-"fields": {
-"body": [
-"Push",
-"Pull",
-"Legs"
-],
-"name": "Weight Lifting",
-"exercise": "Bench Press",
-"sets": "3",
-"reps": "5",
-"weight": "225"
-},
-"createdTime": "2021-06-06T19:29:53.000Z"
-},
-{
-"id": "recssulCz4pH1hHtF",
-"fields": {},
-"createdTime": "2021-06-06T19:29:53.000Z"
-},
-{
-"id": "recdcj8tl47qZZepG",
-"fields": {},
-"createdTime": "2021-06-06T19:29:53.000Z"
+  "records": [
+    {
+      "id": "recf7TwzUF9PacZe0",
+      "fields": {
+        "name": "Weight Lifting",
+        "body": ["Push", "Pull", "Legs"],
+        "exercise": "Bench Press",
+        "weight": "225",
+        "sets": "3",
+        "reps": "5"
+      },
+      "createdTime": "2021-06-06T19:29:53.000Z"
+    }
+  ],
+  "offset": "recdcj8tl47qZZepG"
 }
-],
-"offset": "recdcj8tl47qZZepG"
+```
+
+Cardio Training Table
+
+```json
+{
+  "records": [
+    {
+      "id": "recHLlJRoOCFOXB5Z",
+      "fields": {
+        "name": "Cardio",
+        "exercise": "Brisk Walk",
+        "calories": "150",
+        "duration": "10",
+        "distance": ".7",
+        "heartrate": "150 "
+      },
+      "createdTime": "2021-06-07T01:50:32.000Z"
+    }
+  ],
+  "offset": "rectJuXRLT3daDUbx"
 }
-
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MVP and PostMVP. Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.
+```
 
 #### MVP
 
-_These are examples only. Replace with your own MVP features._
-
-- Upload API from customized Airtable data
+- Make GET and POST request to customized Airtable API
 - Allow user to input custom forms containing workout data and tracking
 - Home page with clickable images that will route to targeted page
+- User can submit forms to display on pages
 
 #### PostMVP
 
-_These are examples only. Replace with your own Post-MVP features._
-
 - Use local storage so user can have saved inputs and look at previous entries
 - Add a calendar so that a user can select which date the exercises were performed on
-- Add calorie tracker
+- Add calorie tracker page
 - Render mobile version
 - Add delete button for any mistakes/typos
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
-
-| Day        | Deliverable                                        | Status     |
-| ---------- | -------------------------------------------------- | ---------- |
-| July 10-12 | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
-| July 13    | Project Approval                                   | Incomplete |
-| July 13    | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
-| July 14    | Pseudocode / actual code                           | Incomplete |
-| July 15    | Initial Clickable Model                            | Incomplete |
-| July 16    | MVP                                                | Incomplete |
-| July 17    | Presentations                                      | Incomplete |
+| Day      | Deliverable                                        | Status     |
+| -------- | -------------------------------------------------- | ---------- |
+| June 4-6 | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
+| June 7   | Project Approval                                   | Incomplete |
+| June 8   | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
+| June 9   | Pseudocode / actual code                           | Incomplete |
+| June 10  | Initial Clickable Model                            | Incomplete |
+| June 11  | MVP                                                | Incomplete |
+| June 12  | Presentations                                      | Incomplete |
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle. You have limited time to code all parts of your app. Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component                                | Priority | Estimated Time | Time Invested | Actual Time |
-| ---------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Approval                         |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Airtable Setup                           |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Psuedocode                               |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Components setup                         |    H     |      1hrs      |     --hrs     |    --hrs    |
-| Code for Home page                       |    H     |      3hrs      |     --hrs     |    --hrs    |
-| Clickable Images on Home page            |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Code for Weight page                     |    H     |      4hrs      |     --hrs     |    --hrs    |
-| Code for Cardio page                     |    H     |      4hrs      |     --hrs     |    --hrs    |
-| PMVP Code for Calorie page               |    M     |      4hrs      |     --hrs     |    --hrs    |
-| Import components with React             |    H     |      3hrs      |     --hrs     |    --hrs    |
-| Route/Link pages                         |    H     |      3hrs      |     --hrs     |    --hrs    |
-| CSS for Home page                        |    H     |      3hrs      |     --hrs     |    --hrs    |
-| CSS for Weight page                      |    H     |      3hrs      |     --hrs     |    --hrs    |
-| CSS for Cardio page                      |    H     |      3hrs      |     --hrs     |    --hrs    |
-| PMVP CSS for Calorie page                |    M     |      2hrs      |     --hrs     |    --hrs    |
-| PMVP Create local storage for user input |    H     |      3hrs      |     --hrs     |    --hrs    |
-| PMVP Add calendar                        |    H     |      3hrs      |     --hrs     |    --hrs    |
-| PMVP CSS Home mobile version             |    H     |      2hrs      |     --hrs     |    --hrs    |
-| PMVP CSS Weight mobile version           |    H     |      2hrs      |     --hrs     |    --hrs    |
-| PMVP CSS Cardio mobile version           |    H     |      2hrs      |     --hrs     |    --hrs    |
-| PMVP CSS Calorie mobile version          |    H     |      2hrs      |     --hrs     |    --hrs    |
-| PMVP Add Delete button                   |    H     |      2hrs      |     --hrs     |    --hrs    |
-
-| Total | H | 57hrs | --hrs | --hrs |
+| Component                            | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
+| Project Approval                     |    H     |      2hrs      |     --hrs     |    --hrs    |
+| Airtable Setup                       |    H     |      2hrs      |     --hrs     |    --hrs    |
+| Psuedocode                           |    H     |      2hrs      |     --hrs     |    --hrs    |
+| Components setup                     |    H     |      1hrs      |     --hrs     |    --hrs    |
+| Code for Home page                   |    H     |      3hrs      |     --hrs     |    --hrs    |
+| Clickable Images on Home page        |    H     |      2hrs      |     --hrs     |    --hrs    |
+| Code for Weight page                 |    H     |      4hrs      |     --hrs     |    --hrs    |
+| Adding multiple forms to Weight Page |    H     |      4hrs      |     --hrs     |    --hrs    |
+| Code for Cardio page                 |    H     |      4hrs      |     --hrs     |    --hrs    |
+| Import components with React         |    H     |      3hrs      |     --hrs     |    --hrs    |
+| Route/Link pages                     |    H     |      3hrs      |     --hrs     |    --hrs    |
+| CSS for Home page                    |    H     |      3hrs      |     --hrs     |    --hrs    |
+| CSS for Weight page                  |    H     |      3hrs      |     --hrs     |    --hrs    |
+| CSS for Cardio page                  |    H     |      3hrs      |     --hrs     |    --hrs    |
+| Total                                |    H     |      hrs       |     --hrs     |    --hrs    |
 
 ## SWOT Analysis
 
