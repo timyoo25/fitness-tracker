@@ -10,6 +10,7 @@ export default function Home() {
     <div>
       <nav>
         <h1>MyFitTrack</h1>
+        <h4>Record and track your progress with the links below!</h4>
         <div>
           <Link to="/weightlifting">
             <img src="https://www.vippng.com/png/detail/180-1804072_weightlifting-powerlifting-png.png"

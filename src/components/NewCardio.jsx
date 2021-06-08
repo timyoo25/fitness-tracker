@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { newCardio } from "../services/api"
 
 const enterCardio = {
+  date: "",
   exercise: "",
-  calories: "",
   duration: "",
   distance: "",
   heartrate: "",
@@ -34,10 +34,10 @@ export default function NewCardio(props) {
   return (
     <div>
       <form onSubmit={handleSubmit} onChange={handleChange}>
+        <label>Date</label>
+        <input type="date" name="date" />
         <label>Exercise</label>
         <input type="text" name="exercise" />
-        <label>Calories Burned</label>
-        <input type="text" name="calories" />
         <label>Duration</label>
         <input type="text" name="duration" />
         <label>Distance</label>

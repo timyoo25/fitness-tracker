@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { newLift } from "../services/api"
 
 const enterLift = {
+  date: "",
   exercise: "",
   weight: "",
   sets: "",
@@ -33,6 +34,8 @@ export default function NewLift(props) {
   return (
     <div>
       <form onSubmit={handleSubmit} onChange={handleChange}>
+        <label>Date</label>
+        <input type="date" name="date" />
         <label>Exercise</label>
         <input type="text" name="exercise" />
         <label>Weight</label>

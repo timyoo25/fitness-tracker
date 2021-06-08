@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
-import { cardioHistory } from "../services/api"
+import { cardioHistory, deleteCardio } from "../services/api"
 
 
 export default function CardioHistory() {
@@ -17,6 +17,9 @@ export default function CardioHistory() {
     fetch()
   }, [])
     
+  const handleDelete = async () => {
+    const res = await deleteCardio(id)
+  }
     
   return (
     <div>
@@ -25,10 +28,11 @@ export default function CardioHistory() {
           return (
             <div>
               <h3>{cardioEntry.fields.exercise}</h3>
-              <p>Calories Burned: {cardioEntry.fields.calories}</p>
+              <h5>{cardioEntry.fields.date}</h5>
               <p>Duration: {cardioEntry.fields.duration}</p>
               <p>Distance: {cardioEntry.fields.distance}</p>
               <p>Heartrate: {cardioEntry.fields.heartrate}</p>
+              <button onClick={handleDelete}>Remove Entry</button>
             </div>
           )
       })}

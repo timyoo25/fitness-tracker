@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
-import { liftHistory } from "../services/api"
+import { deleteLift, liftHistory } from "../services/api"
 
 
 export default function LiftHistory() {
@@ -11,12 +11,15 @@ export default function LiftHistory() {
   useEffect(() => {
     const fetch = async () => {
       const res = await liftHistory(id)
-      console.log(res)
+      // console.log(res)
       setLiftEntries(res.records)
     }
     fetch()
   }, [])
     
+  const handleDelete = async () => {
+    const res = await deleteLift(id)
+  }
     
   return (
     <div>
@@ -24,11 +27,12 @@ export default function LiftHistory() {
         liftEntries.map((liftEntry) => {
         return (
         <div>
-          {/* <h3>{lift.fields?.body[0]}</h3> */}
           <h3>{liftEntry.fields.exercise}</h3>
+          <h5>{liftEntry.fields.date}</h5>
           <p>Weight: {liftEntry.fields.weight}</p>
           <p>Sets: {liftEntry.fields.sets}</p>
             <p>Reps: {liftEntry.fields.reps}</p>
+            <button onClick={handleDelete}>Remove Entry</button>
         </div>
         )
     })}
