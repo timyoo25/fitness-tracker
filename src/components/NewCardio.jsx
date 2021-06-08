@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { newCardio } from "../services/api"
-import Navbar from "./Navbar"
 
 const enterCardio = {
   exercise: "",
@@ -10,8 +9,8 @@ const enterCardio = {
   heartrate: "",
 }
 
-export default function NewCardio(form) {
-
+export default function NewCardio(props) {
+  const { setCardios, setToggleForm } = props
   const [input, setInput] = useState(enterCardio)
 
   const handleChange = async (e) => {
@@ -26,11 +25,14 @@ export default function NewCardio(form) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const res = await newCardio(input)
-    return res
+    setCardios(cardios => ([
+      ...cardios,
+      input
+    ]))
+    setToggleForm(false)
   }
   return (
     <div>
-      <Navbar />
       <form onSubmit={handleSubmit} onChange={handleChange}>
         <label>Exercise</label>
         <input type="text" name="exercise" />
@@ -43,12 +45,6 @@ export default function NewCardio(form) {
         <label>Heartrate</label>
         <input type="text" name="heartrate" />
         <button type="submit">Add Cardio</button>
-        <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/plus-512.png" 
-          onClick={() => {}}
-          width="75"
-          height="75"
-          alt="add form link"
-        />
       </form>
     </div>
   )

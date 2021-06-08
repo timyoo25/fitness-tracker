@@ -1,30 +1,34 @@
 import { Route, Switch } from "react-router-dom";
 
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import ExampleLift from "./components/ExampleLift";
-import ExampleCardio from "./components/ExampleCardio";
-import NewLift from "./components/NewLift";
-import NewCardio from "./components/NewCardio";
+import Home from "./layout/Home";
+import Footer from "./layout/Footer";
+import LiftHistory from "./components/LiftHistory";
+import CardioHistory from "./components/CardioHistory";
+import Navbar from "./layout/Navbar";
+import Lifts from "./components/Lifts";
+import Cardios from "./components/Cardios";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Navbar />
       <Switch>
-        <Route exact path="/weightlifting/new">
-          <NewLift />
+        <Route exact path="/">
+          <Home />
         </Route>
-        <Route exact path="/cardio/new">
-          <NewCardio />
+        <Route exact path="/weightlifting">
+          <Lifts />
+        </Route>
+        <Route exact path="/cardio">
+          <Cardios />
         </Route>
         <Route exact path="/weightlifting/:id">
-          <ExampleLift />
+          <LiftHistory />
         </Route>
         <Route exact path="/cardio/:id">
-          <ExampleCardio />
+          <CardioHistory />
         </Route>
       </Switch>
       <Footer />

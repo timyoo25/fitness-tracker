@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { newLift } from "../services/api"
-import Navbar from "./Navbar"
 
 const enterLift = {
   exercise: "",
@@ -9,10 +8,10 @@ const enterLift = {
   reps: "",
 }
 
-export default function NewLift(form) {
-
+export default function NewLift(props) {
+  const { setLifts, setToggleForm } = props
   const [input, setInput] = useState(enterLift)
-
+  
   const handleChange = async (e) => {
     const { name, value } = e.target
 
@@ -25,11 +24,14 @@ export default function NewLift(form) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const res = await newLift(input)
-    return res
+    setLifts(lifts => ([
+      ...lifts,
+      input
+    ]))
+    setToggleForm(false)
   }
   return (
     <div>
-      <Navbar />
       <form onSubmit={handleSubmit} onChange={handleChange}>
         <label>Exercise</label>
         <input type="text" name="exercise" />
@@ -40,12 +42,6 @@ export default function NewLift(form) {
         <label>Reps</label>
         <input type="text" name="reps" />
         <button type="submit">Add Lift</button>
-        <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/plus-512.png"
-        onClick={() => {}}
-        width="75"
-        height="75"
-        alt="add form link"
-        />
       </form>
     </div>
   )

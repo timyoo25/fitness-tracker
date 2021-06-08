@@ -10,7 +10,7 @@ const config = {
   },
 };
 
-export const exampleLift = async (id) => {
+export const liftHistory = async (id) => {
   try {
     const res = await axios.get(`${weightURL}/${id}`, config);
     return res.data;
@@ -19,7 +19,7 @@ export const exampleLift = async (id) => {
   }
 };
 
-export const exampleCardio = async (id) => {
+export const cardioHistory = async (id) => {
   try {
     const res = await axios.get(`${cardioURL}/${id}`, config);
     return res.data;
