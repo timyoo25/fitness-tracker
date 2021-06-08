@@ -27,8 +27,8 @@ export default function CardioHistory() {
         cardioEntries.map((cardioEntry) => {
           return (
             <div>
-              <h3>{cardioEntry.fields.exercise}</h3>
-              <h5>{cardioEntry.fields.date}</h5>
+              <h3>{cardioEntry.fields.date}</h3>
+              <h4>{cardioEntry.fields.exercise}</h4>
               <p>Duration: {cardioEntry.fields.duration}</p>
               <p>Distance: {cardioEntry.fields.distance}</p>
               <p>Heartrate: {cardioEntry.fields.heartrate}</p>

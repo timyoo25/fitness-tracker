@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const liftURL =
-  "https://api.airtable.com/v0/appJ6gBEuSNHrGZQ9/Weight%20Lifting?";
-const cardioURL = "https://api.airtable.com/v0/appJ6gBEuSNHrGZQ9/Cardio?";
+  "https://api.airtable.com/v0/appJ6gBEuSNHrGZQ9/Weight%20Lifting";
+const cardioURL = "https://api.airtable.com/v0/appJ6gBEuSNHrGZQ9/Cardio";
 const apiKey = process.env.REACT_APP_AIRTABLE_KEY;
 const config = {
   headers: {
@@ -10,9 +10,9 @@ const config = {
   },
 };
 
-export const liftHistory = async (id) => {
+export const liftHistory = async () => {
   try {
-    const res = await axios.get(`${liftURL}/${id}`, config);
+    const res = await axios.get(`${liftURL}`, config);
     return res.data;
   } catch (error) {
     throw error;

@@ -7,6 +7,8 @@ import CardioHistory from "./components/CardioHistory";
 import Navbar from "./layout/Navbar";
 import Lifts from "./components/Lifts";
 import Cardios from "./components/Cardios";
+import LiftingDates from "./components/LiftingDates";
+import WorkoutHistory from "./components/WorkoutHistory";
 
 import "./App.css";
 
@@ -18,18 +20,24 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/weightlifting">
+        <Route exact path="/lifting/new">
           <Lifts />
         </Route>
-        <Route exact path="/cardio">
+        <Route exact path="/cardio/new">
           <Cardios />
         </Route>
-        <Route exact path="/weightlifting/:id">
+        <Route exact path="/lifting/history">
           <LiftHistory />
         </Route>
-        <Route exact path="/cardio/:id">
+        <Route exact path="/cardio/history">
           <CardioHistory />
         </Route>
+        {/*<Route exact path="/dates">
+          <LiftingDates />
+        </Route>
+        <Route exact path="/workouthistory/:date">
+          <WorkoutHistory />
+        </Route> */}
       </Switch>
       <Footer />
     </div>

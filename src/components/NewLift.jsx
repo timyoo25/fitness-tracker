@@ -36,14 +36,19 @@ export default function NewLift(props) {
       <form onSubmit={handleSubmit} onChange={handleChange}>
         <label>Date</label>
         <input type="date" name="date" />
+        <br />
         <label>Exercise</label>
         <input type="text" name="exercise" />
+        <br />
         <label>Weight</label>
         <input type="text" name="weight" />
+        <br />
         <label>Sets</label>
         <input type="text" name="sets" />
+        <br />
         <label>Reps</label>
         <input type="text" name="reps" />
+        <br />
         <button type="submit">Add Lift</button>
       </form>
     </div>
