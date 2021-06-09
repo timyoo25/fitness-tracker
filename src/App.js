@@ -1,4 +1,6 @@
 import { Route, Switch } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { liftHistory, cardioHistory } from "./services/api";
 
 import Home from "./layout/Home";
 import Footer from "./layout/Footer";
@@ -13,6 +15,27 @@ import WorkoutHistory from "./components/WorkoutHistory";
 import "./App.css";
 
 function App() {
+  const [merged, setMerged] = useState([]);
+  const [uniqueDates, setUniqueDates] = useState([]);
+
+  useEffect(() => {
+    const fetchWorkout = async () => {
+      const resLift = await liftHistory();
+      const resCardio = await cardioHistory();
+      const mergedArr = resLift &&
+        resCardio && [...resLift.records, ...resCardio.records];
+      mergedArr && setMerged(mergedArr);
+      const dates = [];
+      mergedArr.forEach((workout) => {
+        if (!dates.includes(workout.fields.date)) {
+          dates.push(workout.fields.date);
+        }
+      });
+      setUniqueDates(dates);
+    };
+    fetchWorkout();
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
@@ -32,12 +55,12 @@ function App() {
         <Route exact path="/cardio/history">
           <CardioHistory />
         </Route>
-        {/*<Route exact path="/dates">
-          <LiftingDates />
+        <Route exact path="/dates">
+          <LiftingDates uniqueDates={uniqueDates} />
         </Route>
         <Route exact path="/workouthistory/:date">
-          <WorkoutHistory />
-        </Route> */}
+          <WorkoutHistory merged={merged} />
+        </Route>
       </Switch>
       <Footer />
     </div>

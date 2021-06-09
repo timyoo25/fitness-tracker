@@ -31,16 +31,16 @@ export default function Home() {
             <p>Enter Cardio</p>
           </div>
           <div>
-            <Link to="/lifting/history">
+            <Link to="/dates">
               <img src="https://www.pngitem.com/pimgs/m/131-1318752_add-note-add-note-icon-png-transparent-png.png"
                 width="100"
                 height="100"
-                alt="lifting entry link"
-              />
+                alt="workout exercises link"
+                />
             </Link>
-            <p>Lift Entries</p>
+                <p>Workout Entries</p>
           </div>
-          <div>
+          {/* <div>
             <Link to="/cardio/history">
               <img src="https://www.pngitem.com/pimgs/m/131-1318752_add-note-add-note-icon-png-transparent-png.png"
                 width="100"
@@ -49,7 +49,7 @@ export default function Home() {
                 />
             </Link>
             <p>Cardio Entries</p>
-          </div>
+          </div> */}
         </div>
       </nav>
     </div>

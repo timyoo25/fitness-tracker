@@ -1,23 +1,21 @@
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router-dom"
 import { cardioHistory, deleteCardio } from "../services/api"
 
 
 export default function CardioHistory() {
 
   const [cardioEntries, setCardioEntries] = useState([])
-  const { id } = useParams()
 
   useEffect(() => {
     const fetch = async () => {
-      const res = await cardioHistory(id)
+      const res = await cardioHistory()
       console.log(res)
       setCardioEntries(res.records)
     }
     fetch()
   }, [])
     
-  const handleDelete = async () => {
+  const handleDelete = async (id) => {
     const res = await deleteCardio(id)
   }
     
@@ -32,7 +30,7 @@ export default function CardioHistory() {
               <p>Duration: {cardioEntry.fields.duration}</p>
               <p>Distance: {cardioEntry.fields.distance}</p>
               <p>Heartrate: {cardioEntry.fields.heartrate}</p>
-              <button onClick={handleDelete}>Remove Entry</button>
+              <button onClick={() => handleDelete(cardioEntry.id)}>Remove Entry</button>
             </div>
           )
       })}

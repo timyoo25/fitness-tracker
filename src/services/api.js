@@ -19,9 +19,9 @@ export const liftHistory = async () => {
   }
 };
 
-export const cardioHistory = async (id) => {
+export const cardioHistory = async () => {
   try {
-    const res = await axios.get(`${cardioURL}/${id}`, config);
+    const res = await axios.get(`${cardioURL}`, config);
     return res.data;
   } catch (error) {
     throw error;
