@@ -24,6 +24,9 @@ function App() {
       const resCardio = await cardioHistory();
       const mergedArr = resLift &&
         resCardio && [...resLift.records, ...resCardio.records];
+      mergedArr.sort((a, b) => {
+        return new Date(a.fields.date) - new Date(b.fields.date);
+      });
       mergedArr && setMerged(mergedArr);
       const dates = [];
       mergedArr.forEach((workout) => {

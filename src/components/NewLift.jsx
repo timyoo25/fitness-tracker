@@ -32,7 +32,7 @@ export default function NewLift(props) {
     setToggleForm(false)
   }
   return (
-    <div>
+    <div className="lift-form">
       <form onSubmit={handleSubmit} onChange={handleChange}>
         <label>Date</label>
         <input type="date" name="date" />

@@ -63,3 +63,11 @@ export const deleteCardio = async (id) => {
     throw error;
   }
 };
+
+export const deleteWorkout = async (id) => {
+  try {
+    const res = await axios.delete();
+  } catch (error) {
+    throw error;
+  }
+};

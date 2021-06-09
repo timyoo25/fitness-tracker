@@ -2,23 +2,89 @@
   text-align: center;
 }
 
+.homepage {
+  background-color: gray;
+}
+
 .home-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 50px;
 }
 
+.home-images {
+  border-radius: 15px;
+  background-color: white;
+  margin: 60px;
+}
 .navbar {
   display: inline;
+  /* background-color: rgb(254, 79, 0); */
 }
 
-.lifts-container {
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(254, 79, 0); */
+}
+.lift-container {
   display: grid;
-  grid-template-columns: repeat (4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.each-lift {
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.lift-form {
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px;
+}
+.cardio-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
+}
+
+.each-cardio {
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.cardio-form {
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px;
+}
+
+.date-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
+}
+
+.dates {
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.workouts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
+}
+
+.each-workout {
+  border: 1px solid black;
+  border-radius: 10%;
+  margin: 10px;
 }

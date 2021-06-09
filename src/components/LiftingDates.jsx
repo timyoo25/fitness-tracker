@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
 
-export default function LiftingDates({uniqueDates}) {
+export default function LiftingDates(props) {
 
   return (
-    <div>
-      {uniqueDates &&
-        uniqueDates.map(date => {
+    <div className="date-container">
+      {props.uniqueDates &&
+        props.uniqueDates.map((date) => {
           return (
-          <div>
-            <Link to={`/workouthistory/${date}`}><p>{date}</p></Link>
+            <div className="dates">
+              <Link to={`/workouthistory/${date}`}><p>{date}</p></Link>
           </div>
         )
       })}

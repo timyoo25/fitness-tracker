@@ -32,21 +32,21 @@ export default function NewCardio(props) {
     setToggleForm(false)
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit} onChange={handleChange}>
-        <label>Date</label>
+    <div className="cardio-form">
+      <form onSubmit={handleSubmit} onChange={handleChange} className="form">
+        <label>Date </label>
         <input type="date" name="date" />
         <br />
-        <label>Exercise</label>
+        <label>Exercise </label>
         <input type="text" name="exercise" />
         <br />
-        <label>Duration</label>
+        <label>Duration </label>
         <input type="text" name="duration" />
         <br />
-        <label>Distance</label>
+        <label>Distance </label>
         <input type="text" name="distance" />
         <br />
-        <label>Heartrate</label>
+        <label>Heartrate </label>
         <input type="text" name="heartrate" />
         <br />
         <button type="submit">Add Cardio</button>
