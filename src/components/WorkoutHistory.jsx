@@ -15,8 +15,8 @@ export default function WorkoutHistory() {
 
   useEffect(() => {
     const fetchWorkout = async () => {
-      const resLift = await liftHistory();
-      resLift.records.map(item => ({...item, type:"lift"}))
+        const resLift = await liftHistory();
+        resLift.records.map(item => ({...item, type:"lift"}))
       const resCardio = await cardioHistory();
       resCardio.records.map(item => ({...item, type:"cardio"}))
       const mergedArr = resLift &&
@@ -64,25 +64,29 @@ export default function WorkoutHistory() {
   }
     
   return (
-  <nav>
-    <Link to="/dates"><p>Workout Entries</p></Link>
-    <div className="workouts-container">
-      {workouts &&
-        workouts.map(workout => {
-          return (
-            <div className="each-workout">
-            <h3>{workout.fields.exercise}</h3>
-            <p>Weight: {workout.fields.weight}</p>
-            <p>Sets: {workout.fields.sets}</p>
-            <p>Reps: {workout.fields.reps}</p>
-            <p>Distance: {workout.fields.distance}</p>
-            <p>Duration: {workout.fields.duration}</p>
-            <p>Heartrate: {workout.fields.heartrate}</p>
-            <button onClick={() => handleDelete(workout.id, workout.type)}>Remove Entry</button>
-          </div>
-        )
-      })}
-    </div>
-  </nav>
+    <div>
+      <nav>
+        <Link to="/dates"><h2 className="back-to-dates">WORKOUT ENTRIES</h2></Link>
+      </nav>
+      <div className="workouts-container">
+        {workouts &&
+          workouts.map(workout => {
+            return (
+              <div className="each-workout" key={workout.id}>
+                <div className="workout-data">
+                  <h2 className="workout-title">{workout.fields.exercise}</h2>
+                  <p>WEIGHT : {workout.fields.weight} LBS</p>
+                  <p>SETS : {workout.fields.sets} X</p>
+                  <p>REPS : {workout.fields.reps} X</p>
+                  <p>DISTANCE : {workout.fields.distance} MI</p>
+                  <p>DURATION : {workout.fields.duration} MINS</p>
+                  <p>HEARTRATE : {workout.fields.heartrate} BPM</p>
+                  <button className="buttons" onClick={() => handleDelete(workout.id, workout.type)}>REMOVE ENTRY</button>
+                </div>
+              </div>
+            )
+          })}
+      </div>
+  </div>
   )
 }

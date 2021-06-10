@@ -9,6 +9,7 @@ export default function Footer() {
           alt="github link"
           height="30"
           width="30"
+          className ="github-icon"
         />
       </a>
       <p>©Tim Yoo</p>
@@ -17,6 +18,7 @@ export default function Footer() {
           alt="linkedin link"
           height="30"
           width="30"
+          className="linkedin-icon"
         />
       </a>
     </div>

@@ -4,9 +4,6 @@ export default function Home() {
 
   return (
     <div className="homepage">
-      <nav>
-        <h1>MyFitTrack</h1>
-        <h4>Record and track your progress with the links below!</h4>
         <div className="home-links">
           <div>
             <Link to="/lifting/new">
@@ -18,7 +15,7 @@ export default function Home() {
                 />
                 </div>
             </Link>
-              <p>Enter Lifts</p>
+              <p>ENTER LIFTS</p>
           </div>
           <div>
             <Link to="/cardio/new">
@@ -30,22 +27,21 @@ export default function Home() {
                 />
               </div>
             </Link>
-            <p>Enter Cardio</p>
+            <p>ENTER CARDIO</p>
           </div>
           <div>
             <Link to="/dates">
             <div className="home-images">
-              <img src="https://www.pngitem.com/pimgs/m/131-1318752_add-note-add-note-icon-png-transparent-png.png"
+              <img src="https://static.thenounproject.com/png/254260-200.png"
                 width="100"
                 height="100"
                 alt="workout exercises link"
               />
             </div>
             </Link>
-                <p>Workout Entries</p>
+                <p>WORKOUT ENTRIES</p>
           </div>
         </div>
-      </nav>
     </div>
 
   )

@@ -4,8 +4,6 @@ import { liftHistory, cardioHistory } from "./services/api";
 
 import Home from "./layout/Home";
 import Footer from "./layout/Footer";
-import LiftHistory from "./components/LiftHistory";
-import CardioHistory from "./components/CardioHistory";
 import Navbar from "./layout/Navbar";
 import Lifts from "./components/Lifts";
 import Cardios from "./components/Cardios";
@@ -59,6 +57,10 @@ function App() {
           <WorkoutHistory merged={merged} />
         </Route>
       </Switch>
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </div>
   );

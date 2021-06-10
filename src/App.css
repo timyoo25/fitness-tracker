@@ -1,97 +1,154 @@
 .App {
   text-align: center;
-  background-color: gray;
+  background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 0%, 0.7) 0%,
+    hsla(0, 0%, 60%, 0.8) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 0%, 0%, 0.7) 0%,
+    hsla(0, 0%, 60%, 0.8) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 0%, 0%, 0.7) 0%,
+    hsla(0, 0%, 60%, 0.8) 100%
+  );
 }
 
-.homepage {
-  background-color: gray;
+.intro {
+  font-family: "Pervitina";
 }
 
 .home-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 50px;
+  font-family: "Pervitina";
 }
 
 .home-images {
+  border: solid rgb(254, 79, 0) 2px;
   border-radius: 15px;
   background-color: white;
-  margin: 60px;
+  margin: auto 30px auto 30px;
 }
-.navbar {
-  display: inline;
-  /* background-color: rgb(254, 79, 0); */
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.buttons {
+  font-family: "Titillium Web";
+  border-radius: 15px;
+}
+
+.navbar,
+.back-to-dates,
+.home-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Pervitina";
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: rgb(254, 79, 0);
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: rgb(254, 79, 0); */
+  color: rgb(254, 79, 0);
+  font-family: "Titillium Web", sans-serif;
 }
+
+.github-icon,
+.linkedin-icon {
+  background-color: rgb(254, 79, 0);
+}
+
+.lift-form,
+.cardio-form,
+.each-cardio,
+.each-lift,
+.each-workout,
+.dates {
+  border: solid rgb(254, 79, 0) 2px;
+  border-radius: 15px;
+  background-color: rgba(107, 1, 152, 0.407);
+  color: white;
+  text-align: center;
+  margin: 10px 5px 10px 5px;
+  /* margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px; */
+  font-family: "Titillium Web", sans-serif;
+}
+
+.cardio-container,
+.date-container,
+.workouts-container,
 .lift-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 10px;
 }
 
-.each-lift {
-  border: 1px solid black;
-  background-color: white;
-  border-radius: 15px;
-  margin: 10px;
+.workout-data {
+  margin: 0px 5px 10px 5px;
 }
 
-.lift-form {
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: white;
-  text-align: center;
-  margin: 10px;
-}
-.cardio-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 10px;
+.workout-title {
+  color: black;
 }
 
-.each-cardio {
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: white;
-  margin: 10px;
+.workout-date {
+  color: rgb(254, 79, 0);
 }
 
-.cardio-form {
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: white;
-  text-align: center;
-  margin: 10px;
+.cardio-entry,
+.lift-entry {
+  font-family: "Pervitina";
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: rgb(254, 79, 0);
 }
 
-.date-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 10px;
+.input {
+  width: 40%;
 }
 
-.dates {
-  border: 1px solid black;
-  margin: 10px;
-  background-color: white;
-  border-radius: 15px;
+.input-date {
+  width: 57%;
 }
 
-.workouts-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 10px;
-}
+@media screen and (max-width: 450px) {
+  .home-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 50px;
+    font-family: "Pervitina";
+  }
 
-.each-workout {
-  border: 1px solid black;
-  border-radius: 10%;
-  background-color: white;
-  margin: 10px;
+  .home-images {
+    border: solid rgb(254, 79, 0) 2px;
+    border-radius: 15px;
+    background-color: white;
+    margin: 15px auto 15px auto;
+    width: 170px;
+    height: 110px;
+  }
+
+  .cardio-container,
+  .date-container,
+  .workouts-container,
+  .lift-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+  }
 }

@@ -34,22 +34,23 @@ export default function NewLift(props) {
   return (
     <div className="lift-form">
       <form onSubmit={handleSubmit} onChange={handleChange}>
-        <label>Date</label>
-        <input type="date" name="date" />
+        <label>Date </label>
+        <input type="date" name="date" className="input-date"/>
         <br />
-        <label>Exercise</label>
-        <input type="text" name="exercise" />
+        <label>Exercise </label>
+        <input type="text" name="exercise" className="input"/>
         <br />
-        <label>Weight</label>
-        <input type="text" name="weight" />
+        <label>Weight </label>
+        <input type="text" name="weight" className="input"/>
+        <label> lbs</label>
         <br />
-        <label>Sets</label>
-        <input type="text" name="sets" />
+        <label>Sets </label>
+        <input type="text" name="sets" className="input"/>
         <br />
-        <label>Reps</label>
-        <input type="text" name="reps" />
+        <label>Reps </label>
+        <input type="text" name="reps" className="input"/>
         <br />
-        <button type="submit">Add Lift</button>
+        <button className="buttons" type="submit">ADD LIFT</button>
       </form>
     </div>
   )

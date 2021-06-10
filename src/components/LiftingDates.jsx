@@ -29,15 +29,17 @@ export default function LiftingDates() {
   }, []);
 
   return (
-    <div className="date-container">
-      {uniqueDates &&
-        uniqueDates.map(date => {
-          return (
-            <div className="dates">
-              <Link to={`/workouthistory/${date}`}><p>{date}</p></Link>
-          </div>
-        )
-      })}
+    <div>
+      <div className="date-container">
+        {uniqueDates &&
+          uniqueDates.map(date => {
+            return (
+              <div className="dates" key={date.id}>
+                <Link to={`/workouthistory/${date}`}><p>{date.toLocaleString()}</p></Link>
+              </div>
+            )
+        })}
+      </div>
     </div>
   )
 }

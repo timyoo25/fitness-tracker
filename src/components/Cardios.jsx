@@ -8,8 +8,8 @@ export default function Cardios() {
 
   return (
     <div>  
-      <div>
-        <h1>Cardio</h1>
+      <div className="cardio-entry">
+        <h1>CARDIO</h1>
         <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/plus-512.png"
           onClick={() => setToggleForm(true)}
           width="75"
@@ -20,12 +20,12 @@ export default function Cardios() {
       <div className="cardio-container">
         {cardios?.map(cardio => {
           return (
-            <div className="each-cardio">
-            <h3>{cardio.date}</h3>
-            <h4>{cardio.exercise}</h4>
-            <p>Duration: {cardio.duration}</p>
-            <p>Distance: {cardio.distance}</p>
-            <p>Heartrate: {cardio.heartrate}</p>
+            <div className="each-cardio" key={cardio.id}>
+              <h3 className="workout-date">{cardio.date}</h3>
+              <h3 className="workout-title">{cardio.exercise}</h3>
+              <p>DURATION : {cardio.duration} MINS</p>
+              <p>DISTANCE : {cardio.distance} MI</p>
+              <p>HEARTRATE : {cardio.heartrate} BPM</p>
             </div>
           )
         })}
@@ -33,7 +33,6 @@ export default function Cardios() {
         <NewCardio setCardios={setCardios} setToggleForm={setToggleForm} />
         : ""
       }
-        
       </div>
     </div>
   )

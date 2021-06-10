@@ -33,23 +33,26 @@ export default function NewCardio(props) {
   }
   return (
     <div className="cardio-form">
-      <form onSubmit={handleSubmit} onChange={handleChange} className="form">
+      <form onSubmit={handleSubmit} onChange={handleChange}>
         <label>Date </label>
-        <input type="date" name="date" />
+        <input type="date" name="date" className="input-date"/>
         <br />
         <label>Exercise </label>
-        <input type="text" name="exercise" />
+        <input type="text" name="exercise" className="input"/>
         <br />
         <label>Duration </label>
-        <input type="text" name="duration" />
+        <input type="text" name="duration" className="input"/>
+        <label> mins</label>
         <br />
         <label>Distance </label>
-        <input type="text" name="distance" />
+        <input type="text" name="distance" className="input"/>
+        <label> mi</label>
         <br />
         <label>Heartrate </label>
-        <input type="text" name="heartrate" />
+        <input type="text" name="heartrate" className="input"/>
+        <label> bpm</label>
         <br />
-        <button type="submit">Add Cardio</button>
+        <button className="buttons" type="submit">ADD CARDIO</button>
       </form>
     </div>
   )
