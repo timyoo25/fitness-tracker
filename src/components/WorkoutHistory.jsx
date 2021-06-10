@@ -1,17 +1,68 @@
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, Redirect } from "react-router-dom"
+import { useState, useEffect } from "react";
 import { deleteLift, deleteCardio } from "../services/api"
+import { liftHistory, cardioHistory } from "../services/api"
 
-export default function WorkoutHistory({ merged }) {
+export default function WorkoutHistory() {
 
   const { date } = useParams()
-  const workouts = merged?.filter(workout => workout.fields.date === date)
-  console.log(workouts)
+  const [merged, setMerged] = useState([]);
+  const [uniqueDates, setUniqueDates] = useState([]);
+  const [toggle, setToggle] = useState(false)
+  const [redirect, setRedirect] = useState(false)
+  const [initialRender, setInitialRender] = useState(true)
+  const [workouts, setWorkouts] = useState([])
 
-  const handleDelete = async (id) => {
-    const resDelLift = await deleteLift(id)
-    const resDelCardio = await deleteCardio(id)
+  useEffect(() => {
+    const fetchWorkout = async () => {
+      const resLift = await liftHistory();
+      resLift.records.map(item => ({...item, type:"lift"}))
+      const resCardio = await cardioHistory();
+      resCardio.records.map(item => ({...item, type:"cardio"}))
+      const mergedArr = resLift &&
+        resCardio && [...resLift.records, ...resCardio.records];
+      mergedArr.sort((a, b) => {
+        return new Date(a.fields.date) - new Date(b.fields.date);
+      });
+      mergedArr && setMerged(mergedArr);
+      const dates = [];
+      mergedArr.forEach((workout) => {
+        if (!dates.includes(workout.fields.date)) {
+          dates.push(workout.fields.date);
+        }
+      });
+      setUniqueDates(dates);
+      setInitialRender(false)
+    };
+    fetchWorkout();
+  }, [toggle]);
+
+  useEffect(() => {
+    let exercises = merged?.filter(workout => workout.fields.date === date)
+    setWorkouts(exercises)
+  }, [merged])
+  
+  useEffect(() => {
+    if (initialRender === false) {
+      if (workouts.length === 0) {
+        setRedirect(true)
+      }
+    }
+  }, [initialRender, workouts])
+
+  const handleDelete = async (id, type) => {
+    if (type === "cardio") {
+      const resDelCardio = await deleteCardio(id)
+    } else {
+      const resDelLift = await deleteLift(id)
+    }
+    setToggle(prevState => !prevState)
   }
-
+    
+  if (redirect) {
+    return <Redirect to="/dates"/>
+  }
+    
   return (
   <nav>
     <Link to="/dates"><p>Workout Entries</p></Link>
@@ -27,7 +78,7 @@ export default function WorkoutHistory({ merged }) {
             <p>Distance: {workout.fields.distance}</p>
             <p>Duration: {workout.fields.duration}</p>
             <p>Heartrate: {workout.fields.heartrate}</p>
-            <button onClick={() => handleDelete(workout.id)}>Remove Entry</button>
+            <button onClick={() => handleDelete(workout.id, workout.type)}>Remove Entry</button>
           </div>
         )
       })}

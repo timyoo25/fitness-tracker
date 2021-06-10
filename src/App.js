@@ -52,12 +52,6 @@ function App() {
         <Route exact path="/cardio/new">
           <Cardios />
         </Route>
-        <Route exact path="/lifting/history">
-          <LiftHistory />
-        </Route>
-        <Route exact path="/cardio/history">
-          <CardioHistory />
-        </Route>
         <Route exact path="/dates">
           <LiftingDates uniqueDates={uniqueDates} />
         </Route>

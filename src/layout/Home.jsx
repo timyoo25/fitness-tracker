@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"
 
 export default function Home() {
@@ -45,16 +44,6 @@ export default function Home() {
             </Link>
                 <p>Workout Entries</p>
           </div>
-          {/* <div>
-            <Link to="/cardio/history">
-              <img src="https://www.pngitem.com/pimgs/m/131-1318752_add-note-add-note-icon-png-transparent-png.png"
-                width="100"
-                height="100"
-                alt="cardio entry link"
-                />
-            </Link>
-            <p>Cardio Entries</p>
-          </div> */}
         </div>
       </nav>
     </div>

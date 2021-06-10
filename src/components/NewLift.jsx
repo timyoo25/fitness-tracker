@@ -5,7 +5,7 @@ const enterLift = {
   date: "",
   exercise: "",
   weight: "",
-  sets: "",
+  sets: "", 
   reps: "",
 }
 
