@@ -62,7 +62,7 @@ export default function WorkoutHistory() {
   if (redirect) {
     return <Redirect to="/dates"/>
   }
-    
+  
   return (
     <div>
       <nav>
@@ -75,12 +75,13 @@ export default function WorkoutHistory() {
               <div className="each-workout" key={workout.id}>
                 <div className="workout-data">
                   <h2 className="workout-title">{workout.fields.exercise}</h2>
-                  <p>WEIGHT : {workout.fields.weight} LBS</p>
-                  <p>SETS : {workout.fields.sets} X</p>
-                  <p>REPS : {workout.fields.reps} X</p>
-                  <p>DISTANCE : {workout.fields.distance} MI</p>
-                  <p>DURATION : {workout.fields.duration} MINS</p>
-                  <p>HEARTRATE : {workout.fields.heartrate} BPM</p>
+                  {workout.fields.weight && <p>WEIGHT : {workout.fields.weight} LBS</p>}
+                  {workout.fields.sets && <p>SETS : {workout.fields.sets} X</p>}
+                  {workout.fields.reps && <p>REPS : {workout.fields.reps} X</p>}
+                  {workout.fields.distance && <p>DISTANCE : {workout.fields.distance} MI</p>}
+                  {workout.fields.duration && <p>DURATION : {workout.fields.duration} MINS</p>}
+                  {workout.fields.heartrate && <p>HEARTRATE : {workout.fields.heartrate} BPM</p>}
+                  {workout.fields.notes && <p>NOTES : {workout.fields.notes}</p>}
                   <button className="buttons" onClick={() => handleDelete(workout.id, workout.type)}>REMOVE ENTRY</button>
                 </div>
               </div>

@@ -7,6 +7,7 @@ const enterCardio = {
   duration: "",
   distance: "",
   heartrate: "",
+  notes: "",
 }
 
 export default function NewCardio(props) {
@@ -31,6 +32,7 @@ export default function NewCardio(props) {
     ]))
     setToggleForm(false)
   }
+  
   return (
     <div className="cardio-form">
       <form onSubmit={handleSubmit} onChange={handleChange}>
@@ -51,6 +53,9 @@ export default function NewCardio(props) {
         <label>Heartrate </label>
         <input type="text" name="heartrate" className="input"/>
         <label> bpm</label>
+        <br />
+        <label>Notes </label>
+        <input type="text" name="notes" className="input"/>
         <br />
         <button className="buttons" type="submit">ADD CARDIO</button>
       </form>

@@ -7,6 +7,7 @@ const enterLift = {
   weight: "",
   sets: "", 
   reps: "",
+  notes: "",
 }
 
 export default function NewLift(props) {
@@ -50,6 +51,8 @@ export default function NewLift(props) {
         <label>Reps </label>
         <input type="text" name="reps" className="input"/>
         <br />
+        <label>Notes </label>
+        <input type="text" name="notes" className="input"/>
         <button className="buttons" type="submit">ADD LIFT</button>
       </form>
     </div>

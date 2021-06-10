@@ -26,6 +26,7 @@ export default function Lifts() {
               <p>WEIGHT : {lift.weight} LBS</p>
               <p>SETS : {lift.sets} X</p>
               <p>REPS : {lift.reps} X</p>
+              <p>NOTES : {lift.notes}</p>
             </div>
           )
         })}
@@ -33,7 +34,6 @@ export default function Lifts() {
         <NewLift setLifts={setLifts} setToggleForm={setToggleForm} />
         : ""
       }
-        
       </div>
     </div>
   )

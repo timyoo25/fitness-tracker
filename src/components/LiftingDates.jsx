@@ -35,7 +35,7 @@ export default function LiftingDates() {
           uniqueDates.map(date => {
             return (
               <div className="dates" key={date.id}>
-                <Link to={`/workouthistory/${date}`}><p>{date.toLocaleString()}</p></Link>
+                <Link to={`/workouthistory/${date}`}><p>{new Date(date).toLocaleDateString()}</p></Link>
               </div>
             )
         })}

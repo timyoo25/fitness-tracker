@@ -26,6 +26,7 @@ export default function Cardios() {
               <p>DURATION : {cardio.duration} MINS</p>
               <p>DISTANCE : {cardio.distance} MI</p>
               <p>HEARTRATE : {cardio.heartrate} BPM</p>
+              <p>NOTES : {cardio.notes}</p>
             </div>
           )
         })}
