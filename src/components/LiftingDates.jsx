@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { liftHistory, cardioHistory } from "../services/api";
 
 export default function LiftingDates() {
-
+// eslint-disable-next-line
   const [merged, setMerged] = useState([]);
   const [uniqueDates, setUniqueDates] = useState([]);
 

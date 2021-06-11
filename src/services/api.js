@@ -66,7 +66,7 @@ export const deleteCardio = async (id) => {
 
 export const deleteWorkout = async (id) => {
   try {
-    const res = await axios.delete();
+    await axios.delete();
   } catch (error) {
     throw error;
   }

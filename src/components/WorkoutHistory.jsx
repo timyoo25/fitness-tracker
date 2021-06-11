@@ -4,9 +4,9 @@ import { deleteLift, deleteCardio } from "../services/api"
 import { liftHistory, cardioHistory } from "../services/api"
 
 export default function WorkoutHistory() {
-
   const { date } = useParams()
   const [merged, setMerged] = useState([]);
+  // eslint-disable-next-line
   const [uniqueDates, setUniqueDates] = useState([]);
   const [toggle, setToggle] = useState(false)
   const [redirect, setRedirect] = useState(false)
@@ -40,6 +40,7 @@ export default function WorkoutHistory() {
   useEffect(() => {
     let exercises = merged?.filter(workout => workout.fields.date === date)
     setWorkouts(exercises)
+    // eslint-disable-next-line
   }, [merged])
   
   useEffect(() => {
@@ -52,9 +53,9 @@ export default function WorkoutHistory() {
 
   const handleDelete = async (id, type) => {
     if (type === "cardio") {
-      const resDelCardio = await deleteCardio(id)
+      await deleteCardio(id)
     } else {
-      const resDelLift = await deleteLift(id)
+      await deleteLift(id)
     }
     setToggle(prevState => !prevState)
   }

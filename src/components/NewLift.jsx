@@ -25,7 +25,7 @@ export default function NewLift(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await newLift(input)
+    await newLift(input)
     setLifts(lifts => ([
       ...lifts,
       input

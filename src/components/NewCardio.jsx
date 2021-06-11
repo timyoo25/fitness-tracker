@@ -25,7 +25,7 @@ export default function NewCardio(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await newCardio(input)
+    await newCardio(input)
     setCardios(cardios => ([
       ...cardios,
       input
