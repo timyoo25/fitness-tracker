@@ -52,7 +52,8 @@ export default function NewLift(props) {
         <input type="text" name="reps" className="input"/>
         <br />
         <label>Notes </label>
-        <input type="text" name="notes" className="input"/>
+        <input type="text" name="notes" className="input" />
+        <br />
         <button className="buttons" type="submit">ADD LIFT</button>
       </form>
     </div>

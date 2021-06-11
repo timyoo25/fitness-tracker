@@ -39,29 +39,33 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/lifting/new">
-          <Lifts />
-        </Route>
-        <Route exact path="/cardio/new">
-          <Cardios />
-        </Route>
-        <Route exact path="/dates">
-          <LiftingDates uniqueDates={uniqueDates} />
-        </Route>
-        <Route exact path="/workouthistory/:date">
-          <WorkoutHistory merged={merged} />
-        </Route>
-      </Switch>
-      <br />
-      <br />
-      <br />
-      <br />
-      <Footer />
+      <div className="">
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/lifting/new">
+            <Lifts />
+          </Route>
+          <Route exact path="/cardio/new">
+            <Cardios />
+          </Route>
+          <Route exact path="/dates">
+            <LiftingDates uniqueDates={uniqueDates} />
+          </Route>
+          <Route exact path="/workouthistory/:date">
+            <WorkoutHistory merged={merged} />
+          </Route>
+        </Switch>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }
