@@ -65,7 +65,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   color: rgb(254, 79, 0);
-  font-family: "Titillium Web";
+  font-family: "Titillium Web", sans-serif;
 }
 
 .github-icon,
@@ -87,7 +87,7 @@ a:visited {
   grid-template-columns: 1fr;
   text-align: center;
   margin: 10px 5px 10px 5px;
-  font-family: "Titillium Web";
+  font-family: "Titillium Web", sans-serif;
 }
 
 .cardio-container,
@@ -141,7 +141,14 @@ a:visited {
     display: flex;
     justify-content: space-around;
     font-family: "Pervitina";
-    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(254, 79, 0);
+  }
+
+  .cardio-entry,
+  .lift-entry {
+    font-family: "Pervitina";
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(254, 79, 0);
   }
 
@@ -152,6 +159,17 @@ a:visited {
     margin: 15px auto 15px auto;
     width: 170px;
     height: 110px;
+  }
+
+  .lift-form,
+  .cardio-form,
+  .each-cardio,
+  .each-lift,
+  .each-workout,
+  .dates,
+  .footer,
+  .buttons {
+    font-family: "Titillium Web", sans-serif;
   }
 
   .cardio-container,
