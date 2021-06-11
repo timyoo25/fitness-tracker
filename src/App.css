@@ -160,7 +160,9 @@ a:visited {
     width: 170px;
     height: 110px;
   }
-
+  .cardio-form {
+    margin: auto;
+  }
   .lift-form,
   .cardio-form,
   .each-cardio,
