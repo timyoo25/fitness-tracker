@@ -169,7 +169,11 @@ a:visited {
   .dates,
   .footer,
   .buttons {
-    font-family: "Titillium Web", sans-serif;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .buttons {
+    background-color: lightgrey;
   }
 
   .cardio-container,
