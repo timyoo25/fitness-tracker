@@ -33,6 +33,14 @@
   margin: auto 30px auto 30px;
 }
 
+.home-images:hover,
+.buttons:hover,
+.dates:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 2px 4px 4px black;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
