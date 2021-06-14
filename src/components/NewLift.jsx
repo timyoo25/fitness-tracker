@@ -34,26 +34,31 @@ export default function NewLift(props) {
   }
   return (
     <div className="lift-form">
-      <form onSubmit={handleSubmit} onChange={handleChange}>
-        <label>Date </label>
-        <input type="date" name="date" className="input-date"/>
-        <br />
-        <label>Exercise </label>
-        <input type="text" name="exercise" className="input"/>
-        <br />
-        <label>Weight </label>
-        <input type="text" name="weight" className="input"/>
-        <label> lbs</label>
-        <br />
-        <label>Sets </label>
-        <input type="text" name="sets" className="input"/>
-        <br />
-        <label>Reps </label>
-        <input type="text" name="reps" className="input"/>
-        <br />
-        <label>Notes </label>
-        <input type="text" name="notes" className="input" />
-        <br />
+      <form onSubmit={handleSubmit} onChange={handleChange} className="form">
+        <div>
+        <label className="lift-label">Date</label>
+        <input type="date" name="date" className="lift-input-date"/>
+        </div>
+        <div>
+        <label className="lift-label">Exercise</label>
+        <input type="text" name="exercise" className="lift-input"/>
+        </div>
+        <div>
+        <label className="lift-label">Weight</label>
+        <input type="text" name="weight" className="lift-input" placeholder="lbs"/>
+        </div>
+        <div>
+        <label className="lift-label">Sets</label>
+        <input type="text" name="sets" className="lift-input"/>
+        </div>
+        <div>
+        <label className="lift-label">Reps</label>
+        <input type="text" name="reps" className="lift-input"/>
+        </div>
+        <div>
+        <label className="lift-label">Notes</label>
+        <input type="text" name="notes" className="lift-input"/>
+        </div>
         <button className="buttons" type="submit">ADD LIFT</button>
       </form>
     </div>
