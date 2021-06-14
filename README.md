@@ -29,11 +29,11 @@ Weight Lifting Table
       "id": "recf7TwzUF9PacZe0",
       "fields": {
         "name": "Weight Lifting",
-        "body": ["Push", "Pull", "Legs"],
         "exercise": "Bench Press",
         "weight": "225",
         "sets": "3",
-        "reps": "5"
+        "reps": "5",
+        "notes": ""
       },
       "createdTime": "2021-06-06T19:29:53.000Z"
     }
@@ -81,37 +81,39 @@ Cardio Training Table
 
 ## Project Schedule
 
-| Day        | Deliverable                                        | Status     |
-| ---------- | -------------------------------------------------- | ---------- |
-| June 4-6   | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
-| June 7     | Project Approval                                   | Incomplete |
-| June 8     | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
-| June 9     | Pseudocode / actual code                           | Incomplete |
-| June 10    | Initial Clickable Model                            | Incomplete |
-| June 11    | MVP                                                | Incomplete |
-| June 12-13 | CSS Frameworks                                     | Incomplete |
-| June 14    | Presentations                                      | Incomplete |
+| Day        | Deliverable                                        | Status   |
+| ---------- | -------------------------------------------------- | -------- |
+| June 4-6   | Prompt / Wireframes / Priority Matrix / Timeframes | Complete |
+| June 7     | Project Approval                                   | Complete |
+| June 8     | Core Application Structure (HTML, CSS, etc.)       | Complete |
+| June 9     | Pseudocode / actual code                           | Complete |
+| June 10    | Initial Clickable Model                            | Complete |
+| June 11    | MVP                                                | Complete |
+| June 12-13 | CSS Frameworks                                     | Complete |
+| June 14    | Presentations                                      | Complete |
 
 ## Timeframes
 
 | Component                                       | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Approval                                |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Airtable Setup                                  |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Psuedocode                                      |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Components setup                                |    H     |      1hrs      |     --hrs     |    --hrs    |
-| Code for Home page                              |    H     |      3hrs      |     --hrs     |    --hrs    |
-| Clickable Images on Home page                   |    H     |      2hrs      |     --hrs     |    --hrs    |
-| Code for Weight page                            |    H     |      4hrs      |     --hrs     |    --hrs    |
-| Adding multiple forms to Weight Page            |    H     |      4hrs      |     --hrs     |    --hrs    |
-| Creating individual submit buttons to each form |    H     |      4hrs      |     --hrs     |    --hrs    |
-| Code for Cardio page                            |    H     |      4hrs      |     --hrs     |    --hrs    |
-| Import components with React                    |    H     |      3hrs      |     --hrs     |    --hrs    |
-| Route/Link pages                                |    H     |      3hrs      |     --hrs     |    --hrs    |
-| CSS for Home page                               |    H     |      3hrs      |     --hrs     |    --hrs    |
-| CSS for Weight page                             |    H     |      3hrs      |     --hrs     |    --hrs    |
-| CSS for Cardio page                             |    H     |      3hrs      |     --hrs     |    --hrs    |
-| Total                                           |    H     |     43hrs      |     --hrs     |    --hrs    |
+| Project Approval                                |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Airtable Setup                                  |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Psuedocode                                      |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Components setup                                |    H     |      1hrs      |     2hrs      |    2hrs     |
+| Code for Home page                              |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Clickable Images on Home page                   |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Code for Weight page                            |    H     |      4hrs      |     4hrs      |    4hrs     |
+| Adding multiple forms to Weight Page            |    H     |      4hrs      |     4hrs      |    4hrs     |
+| Creating individual submit buttons to each form |    H     |      4hrs      |     2hrs      |    2hrs     |
+| Code for Cardio page                            |    H     |      4hrs      |     4hrs      |    4hrs     |
+| Merge Cardio/Weight array into one              |    H     |      4hrs      |     5hrs      |    5hrs     |
+| Import components with React                    |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Route/Link pages                                |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Create delete functionality                     |    H     |      4hrs      |     4hrs      |    4hrs     |
+| CSS for Home page                               |    H     |      3hrs      |     2hrs      |    2hrs     |
+| CSS for Weight page                             |    H     |      3hrs      |     4hrs      |    4hrs     |
+| CSS for Cardio page                             |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Total                                           |    H     |     49hrs      |     53hrs     |    53hrs    |
 
 ## SWOT Analysis
 
